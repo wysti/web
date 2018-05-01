@@ -4,11 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { LoginComponent } from './login/login.component';
 import { SearchModule } from './search/search.module';
 import { SearchStartComponent } from './search-start/search-start.component';
 import { NewOrEditMainComponent } from './new-or-edit-main/new-or-edit-main.component';
 import { CreateModule } from './create/create.module';
 import { UserModule } from './user/user.module';
+import { AboutWystiComponent } from './about-wysti/about-wysti.component';
+
 
 const appRoutes: Routes = [
     { path : 'top',
@@ -19,6 +22,12 @@ const appRoutes: Routes = [
     },
     { path : 'create',
       component: NewOrEditMainComponent
+    },
+    { path : 'about',
+      component: AboutWystiComponent
+    },    
+    { path : 'login',
+      component: LoginComponent
     },
     { path: '',
       redirectTo: '/top',
@@ -31,7 +40,8 @@ const appRoutes: Routes = [
   declarations: [
       AppComponent,
       WelcomeComponent,
-      MenuComponent
+      MenuComponent,
+      AboutWystiComponent
   ],
   imports: [
       BrowserModule,
